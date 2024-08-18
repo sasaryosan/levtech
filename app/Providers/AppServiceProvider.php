@@ -11,7 +11,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        
     }
 
     /**
@@ -19,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+
+
+       // Paginator::useBootstrapFive();    公式ドキュメント
+       //または Paginator::useBootstrapFour();    公式ドキュメン
     }
 }
