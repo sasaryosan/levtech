@@ -28,6 +28,7 @@ class PostController extends Controller
         //'post'はbladeファイルで使う変数。中身は$postはid=1のPostインスタンス。
     }
     
+
     public function create()
     {
         return view('posts.create');
@@ -52,5 +53,11 @@ class PostController extends Controller
         $post->fill($input_post)->save();
 
         return redirect('/posts/' . $post->id); 
+    }
+    
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return redirect('/');
     }
 }
